@@ -122,7 +122,7 @@ namespace Vector_Calculator
 
         public static Vector CrossProduct(Vector v1, Vector v2)
         {
-            //if vector larger than 3D return 0, 0, 0
+            //if vector longer than 3 return 0, 0, 0
             if (v1.components.Length == 3)
             {
                 //hard to explain just read the code
@@ -145,7 +145,7 @@ namespace Vector_Calculator
 
         public static Vector ProjectOnto(Vector v1, Vector v2)
         {
-            //if vector larger than 3D return 0, 0, 0
+            //if vector longer than 3 return 0, 0, 0
             if (v1.components.Length == 3)
             {
                 //again just look at the code
@@ -162,7 +162,7 @@ namespace Vector_Calculator
 
         public static bool operator==(Vector v1, Vector v2)
         {
-            // this is DEFINITELY not optimal but I don't care
+            // this is DEFINITELY not optimal but I don't have time
             float equalcheck = 0;
             for (int i = 0; i < v1.components.Length; i++)
             {
