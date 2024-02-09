@@ -187,26 +187,7 @@ namespace Vector_Calculator
         }
         public static bool operator!=(Vector v1, Vector v2)
         {
-            float equalcheck = 0;
-            for (int i = 0; i < v1.components.Length; i++)
-            {
-                if (v1.components[i] == v2.components[i])
-                {
-                    equalcheck = equalcheck;
-                }
-                else
-                {
-                    equalcheck++;
-                }
-            }
-            if (equalcheck == 0)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return !(v1 == v2);
         }
     }
 }
