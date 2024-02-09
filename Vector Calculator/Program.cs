@@ -8,7 +8,36 @@ namespace Vector_Calculator
         {
             //i love making colorful and descriptive interfaces
             //vector input
-            Console.ForegroundColor = ConsoleColor.Yellow;
+
+            Console.WriteLine("Input vector size.");
+            int vecSize = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Input first vector. One value at a time!");
+            Console.ForegroundColor = ConsoleColor.White;
+            //create test1 to add values to it in for loop
+            Vector test1 = new Vector(vecSize);
+
+            for (int i = 0; i < vecSize; i++)
+            {
+                //code to add Console.ReadLine() as a new value in the Vector i times
+                float value = Convert.ToSingle(Console.ReadLine());
+                test1.components[i] = value;
+            }
+
+            Console.WriteLine("Input second vector. One value at a time!");
+            Console.ForegroundColor = ConsoleColor.White;
+            Vector test2 = new Vector(vecSize);
+            for (int i = 0; i < vecSize; i++)
+            {
+                //code to add Console.ReadLine() as a new value in the Vector i times
+                float value = Convert.ToSingle(Console.ReadLine());
+                test2.components[i] = value;
+            }
+            Console.WriteLine("Input Scalar.");
+            Console.ForegroundColor = ConsoleColor.White;
+            float scalar = Convert.ToSingle(Console.ReadLine());
+
+
+            /*Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Input first vector. One value at a time!");
             Console.ForegroundColor = ConsoleColor.White;
             Vector test1 = new Vector(Convert.ToSingle(Console.ReadLine()), Convert.ToSingle(Console.ReadLine()), Convert.ToSingle(Console.ReadLine()));
@@ -21,7 +50,7 @@ namespace Vector_Calculator
             Console.ForegroundColor = ConsoleColor.White;
             float scalar = Convert.ToSingle(Console.ReadLine());
             Console.WriteLine("");
-            Console.WriteLine("");
+            Console.WriteLine("");*/
 
             //tests
             Console.ForegroundColor = ConsoleColor.Green;
@@ -47,6 +76,7 @@ namespace Vector_Calculator
             Console.WriteLine("");
 
             Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Vector.ProjectOnto: " + Vector.ProjectOnto(test1, test2));
             Console.WriteLine("Vector.Normalize: " + Vector.Normalize(test1) + " (Product [Should be ~ 1]: " + Vector.Normalize(test1).GetMagnitude + ")");
             Console.WriteLine("Equal: " + (test1 == test2));
             Console.WriteLine("");
